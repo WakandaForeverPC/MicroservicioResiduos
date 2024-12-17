@@ -8,3 +8,20 @@ body {
 canvas {
     margin: 20px;
 }
+#graficoVerde {
+    max-width: 600px;
+    max-height: 600px;
+    margin: auto;
+}
+#graficoAmarillo {
+    max-width: 600px;
+    max-height: 600px;
+    margin: auto;
+}
+#graficoAzul {
+    max-width: 600px;
+    max-height: 600px;
+    margin: auto;
+}
+
+
