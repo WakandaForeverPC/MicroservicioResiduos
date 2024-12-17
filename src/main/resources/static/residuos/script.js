@@ -5,9 +5,9 @@ if (botonResiduos) {
     botonResiduos.addEventListener('click', function() {
         // Datos inventados
         const datos = {
-            verde: [30, 70],
+            verde: [60, 40],
             amarillo: [50, 50],
-            azul: [20, 80]
+            azul: [80, 20]
         };
 
         // Realizar la solicitud a la API para obtener los datos de residuos
