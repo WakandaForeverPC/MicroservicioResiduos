@@ -1,25 +1,19 @@
-// Obtener el botón 'residuos-management-button' que llevará a los gráficos
-const botonResiduos = document.getElementById('residuos-management-button');
-
-if (botonResiduos) {
-    botonResiduos.addEventListener('click', function() {
-        // Datos inventados
+document.addEventListener("DOMContentLoaded", () => {
+  
+    const actualizarGraficos = () => {
         const datos = {
             verde: [60, 40],
             amarillo: [50, 50],
             azul: [80, 20]
         };
 
-        // Realizar la solicitud a la API para obtener los datos de residuos
         fetch("http://localhost:8080/mapa/residuos")
             .then(response => response.json())
             .then(apiDatos => {
-                // Seleccionar los elementos de los gráficos
                 const ctxVerde = document.getElementById("graficoVerde").getContext("2d");
                 const ctxAmarillo = document.getElementById("graficoAmarillo").getContext("2d");
                 const ctxAzul = document.getElementById("graficoAzul").getContext("2d");
 
-                // Crear gráfico de pie para el contenedor verde
                 new Chart(ctxVerde, {
                     type: "pie",
                     data: {
@@ -47,7 +41,6 @@ if (botonResiduos) {
                     }
                 });
 
-                // Crear gráfico de pie para el contenedor amarillo
                 new Chart(ctxAmarillo, {
                     type: "pie",
                     data: {
@@ -75,7 +68,6 @@ if (botonResiduos) {
                     }
                 });
 
-                // Crear gráfico de pie para el contenedor azul
                 new Chart(ctxAzul, {
                     type: "pie",
                     data: {
@@ -104,7 +96,9 @@ if (botonResiduos) {
                 });
             })
             .catch(error => console.error("Error al obtener los datos:", error));
-    });
-} else {
-    console.error("El botón con id 'residuos-management-button' no se encuentra en el documento.");
-}
+    };
+
+    actualizarGraficos();
+
+    setInterval(actualizarGraficos, 900000);
+});
