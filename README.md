@@ -1,6 +1,8 @@
 # MicroservicioResiduos
 
-MicroservicioResiduos es una aplicación Spring Boot diseñada para gestionar datos de residuos. Incluye una interfaz web para mostrar estadísticas de residuos utilizando gráficos.
+## Descripcion
+
+El microservicio de Residuos es una aplicación desarrollada con Spring Boot que gestiona datos de residuos. El objetivo principal de este microservicio es ofrecer una API que devuelva datos de residuos y una interfaz web para visualizar estos datos mediante gráficos interactivos.
 
 ## Estructura del Proyecto
 
@@ -38,6 +40,6 @@ Esta es la clase principal que inicia la aplicación Spring Boot.
 
 - Este archivo contiene las propiedades de configuración para la aplicación Spring Boot, incluyendo el puerto del servidor, el cliente Eureka y las configuraciones de Prometheus.
 
-
+URL: 
 
 
